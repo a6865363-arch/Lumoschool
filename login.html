@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMOS SCHOOL - Kirish</title>
+    <link rel="icon" type="image/png"
+        href="https://play-lh.googleusercontent.com/rM2d2Mqnib05_vzZA4EILU83_L3n-rApKBCx0L0mZB0UGPDPythUXdFueHw83ZEYxA">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="login-page">
+    <div id="login-screen" class="login-overlay">
+        <div class="login-box glass">
+            <div class="login-logo">
+                <img src="https://play-lh.googleusercontent.com/rM2d2Mqnib05_vzZA4EILU83_L3n-rApKBCx0L0mZB0UGPDPythUXdFueHw83ZEYxA"
+                    alt="LUMOS MIND Logo">
+                <h2 id="form-title">LUMOS SCHOOL</h2>
+                <p id="form-desc">Admin panelga kirish uchun login va parolni kiriting.</p>
+            </div>
+
+            <form id="login-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Login" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Parol" required>
+                </div>
+                <button type="submit" id="submit-btn" class="btn btn-primary full-width">Kirish</button>
+            </form>
+
+            <div id="login-error" class="error-msg"></div>
+
+            <div style="margin-top: 25px; display: flex; flex-direction: column; gap: 15px;">
+                <a href="javascript:void(0)" id="toggle-form" style="color: var(--accent); font-weight: 600;">Ro'yxatdan
+                    o'tish</a>
+                <a href="index.html" style="color: var(--white); opacity: 0.7; font-size: 0.9rem;">
+                    <i class="fas fa-arrow-left"></i> Saytga qaytish
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const formTitle = document.getElementById('form-title');
+        const formDesc = document.getElementById('form-desc');
+        const submitBtn = document.getElementById('submit-btn');
+        const toggleBtn = document.getElementById('toggle-form');
+        const errorMsg = document.getElementById('login-error');
+
+        let isLogin = true;
+
+        toggleBtn.addEventListener('click', () => {
+            isLogin = !isLogin;
+            formTitle.innerText = isLogin ? 'LUMOS SCHOOL' : 'Ro\'yxatdan o\'tish';
+            formDesc.innerText = isLogin ? 'Admin panelga kirish uchun login va parolni kiriting.' : 'Yangi admin yaratish uchun ma\'lumotlarni kiriting.';
+            submitBtn.innerText = isLogin ? 'Kirish' : 'Ro\'yxatdan o\'tish';
+            toggleBtn.innerText = isLogin ? 'Ro\'yxatdan o\'tish' : 'Kirish profili bormi? Kirish';
+            errorMsg.innerText = '';
+        });
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            if (isLogin) {
+                // Login Logic
+                const users = JSON.parse(localStorage.getItem('adminUsers') || '[]');
+                // Default fallback for first time
+                if (users.length === 0 && user === 'Lumoschool' && pass === 'lumos12shool') {
+                    users.push({ user: 'Lumoschool', pass: 'lumos12shool' });
+                    localStorage.setItem('adminUsers', JSON.stringify(users));
+                }
+
+                const found = users.find(u => u.user === user && u.pass === pass);
+                if (found) {
+                    localStorage.setItem('isLoggedIn', 'true');
+                    localStorage.setItem('currentUser', user);
+
+                    // Track Admin Entry (if user is Lumoschool)
+                    if (user === 'Lumoschool') {
+                        let visits = parseInt(localStorage.getItem('adminPanelVisits') || '0');
+                        localStorage.setItem('adminPanelVisits', visits + 1);
+                    }
+
+                    // Redirect to Admin Panel
+                    window.location.href = 'admin.html';
+                } else {
+                    errorMsg.innerText = 'Login yoki parol xato!';
+                    document.querySelector('.login-box').style.animation = 'shake 0.5s';
+                    setTimeout(() => document.querySelector('.login-box').style.animation = '', 500);
+                }
+            } else {
+                // Register Logic
+                const users = JSON.parse(localStorage.getItem('adminUsers') || '[]');
+                if (users.find(u => u.user === user)) {
+                    errorMsg.innerText = 'Bu foydalanuvchi allaqachon mavjud!';
+                    return;
+                }
+                users.push({ user, pass });
+                localStorage.setItem('adminUsers', JSON.stringify(users));
+                errorMsg.style.color = '#4ade80';
+                errorMsg.innerText = 'Muvaffaqiyatli ro\'yxatdan otdingiz! Endi kiring.';
+                setTimeout(() => {
+                    errorMsg.style.color = '#ff4d4d';
+                    toggleBtn.click();
+                }, 1500);
+            }
+        });
+
+        // Har doim login/parol so'ralishi uchun oldingi sessiyani o'chiramiz
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('currentUser');
+
+        // Auto-redirect disabled to force login every time
+        /*
+        if (localStorage.getItem('isLoggedIn') === 'true') {
+            window.location.href = 'admin.html';
+        }
+        */
+    </script>
+</body>
+
+</html>

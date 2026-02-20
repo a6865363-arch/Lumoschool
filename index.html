@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMOS SCHOOL - Kelajak Maktabi</title>
+    <meta name="description"
+        content="LUMOS SCHOOL - Sifatli ta'lim va yorqin kelajak poydevori. Biz bilan dunyo darajasidagi bilimlarni oling.">
+    <link rel="icon" type="image/png"
+        href="https://play-lh.googleusercontent.com/rM2d2Mqnib05_vzZA4EILU83_L3n-rApKBCx0L0mZB0UGPDPythUXdFueHw83ZEYxA">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="https://play-lh.googleusercontent.com/rM2d2Mqnib05_vzZA4EILU83_L3n-rApKBCx0L0mZB0UGPDPythUXdFueHw83ZEYxA"
+                    alt="LUMOS MIND Logo">
+                <span>LUMOS SCHOOL</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active" data-i18n="nav-home">Asosiy</a></li>
+                    <li><a href="#about" data-i18n="nav-about">Biz haqimizda</a></li>
+                    <li><a href="#programs" data-i18n="nav-programs">Dasturlar</a></li>
+                    <li><a href="#teachers" data-i18n="nav-teachers">Ustozlar</a></li>
+                    <li><a href="#news" data-i18n="nav-news">Yangiliklar</a></li>
+                    <li><a href="javascript:void(0)" class="open-admission-modal" data-i18n="nav-admission"
+                            style="color: var(--accent); font-weight: bold;">Qabul</a></li>
+                    <li><a href="#contact" data-i18n="nav-contact">Aloqa</a></li>
+                </ul>
+            </nav>
+            <div class="nav-extra">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <span>|</span>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <span>|</span>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="section-subtitle animate-up" data-i18n="hero-subtitle">Kelajak Maktabi</h2>
+                    <h1 class="animate-up" data-i18n="hero-title">Kelajakni <span>Biz Bilan</span> Quring</h1>
+                    <p class="animate-up delay-1" data-i18n="hero-desc">LUMOS SCHOOL - bu nafaqat maktab, balki
+                        istedodlar va innovatsiyalar makonidir. Sifatli ta'lim orqali yuksak cho'qqilarni zabt eting.
+                    </p>
+                    <div class="hero-btns animate-up delay-2">
+                        <a href="#about" class="btn btn-primary" data-i18n="hero-btn-1">Batafsil ma'lumot</a>
+                        <a href="#contact" class="btn btn-outline" data-i18n="hero-btn-2">Hoziroq ro'yxatdan o'ting</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card glass animate-fade">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3 class="counter" data-target="800">0+</h3>
+                        <p data-i18n="stats-grad">O'quvchilar</p>
+                    </div>
+                    <div class="stat-card glass animate-fade">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3 class="counter" data-target="150">0+</h3>
+                        <p data-i18n="stats-teachers">O'qituvchilar</p>
+                    </div>
+                    <div class="stat-card glass animate-fade">
+                        <i class="fas fa-school"></i>
+                        <h3 class="counter" data-target="200">0+</h3>
+                        <p data-i18n="stats-rooms">Honalar</p>
+                    </div>
+                    <div class="stat-card glass animate-fade">
+                        <i class="fas fa-award"></i>
+                        <h3 class="counter" data-target="42">0</h3>
+                        <p data-i18n="stats-awards">Yutuqlarimiz</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-flex">
+                    <div class="about-image animate-left">
+                        <img src="about.png" alt="LUMOS MIND Innovation">
+                        <div class="experience-badge">
+                            <span class="num">15</span>
+                            <span class="txt" data-i18n="about-exp">Yillik tajriba</span>
+                        </div>
+                    </div>
+                    <div class="about-content animate-right">
+                        <span class="section-subtitle" data-i18n="about-subtitle">Zamonaviy Texnologiyalar</span>
+                        <h2 class="section-title" data-i18n="about-title">Ma'lumotlarni Avtomatlashtirish darslari</h2>
+                        <p data-i18n="about-desc">«Lumos School» — Toshkentdagi arab tili, ingliz tili va matematika
+                            fanlari chuqur o'rgatiladigan xususiy maktab. 2018-yildan buyon faoliyat ko'rsatib kelmoqda,
+                            o'qituvchilar tarkibi 10 yildan ortiq ish tajribasiga ega.</p>
+                        <ul class="about-list">
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="about-list-1">Zamonaviy o'quv
+                                    texnologiyalari</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="about-list-2">Tajribali va xalqaro
+                                    o'qituvchilar</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-i18n="about-list-3">Keng qamrovli sport
+                                    va san'at to'garaklari</span></li>
+                        </ul>
+                        <button class="btn btn-primary" data-i18n="about-btn">Batafsil o'qish</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="programs">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle" data-i18n="programs-subtitle">O'quv dasturlari</span>
+                    <h2 class="section-title" data-i18n="programs-title">Bizning Maxsus Yo'nalishlarimiz</h2>
+                </div>
+                <div class="programs-grid">
+                    <div class="program-card animate-up" data-id="it">
+                        <div class="program-icon"><i class="fas fa-code"></i></div>
+                        <h3 data-i18n="prog-it-title">IT va Dasturlash</h3>
+                        <p data-i18n="prog-it-desc">Kompyuter savodxonligidan tortib murakkab dasturlash tillarigacha
+                            o'rgatamiz.</p>
+                        <a href="javascript:void(0)" class="read-more open-modal"><span
+                                data-i18n="common-more">Batafsil</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="program-card animate-up" data-id="science">
+                        <div class="program-icon"><i class="fas fa-book-quran"></i></div>
+                        <h3 data-i18n="prog-science-title">Arab Tili</h3>
+                        <p data-i18n="prog-science-desc">Arab tilini eng tajribali ustozlardan mukammal tarzda
+                            o'rganing.</p>
+                        <a href="javascript:void(0)" class="read-more open-modal"><span
+                                data-i18n="common-more">Batafsil</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="program-card animate-up" data-id="lang">
+                        <div class="program-icon"><i class="fas fa-font"></i></div>
+                        <h3 data-i18n="prog-lang-title">English Tili</h3>
+                        <p data-i18n="prog-lang-desc">IELTS va kundalik muloqot uchun ingliz tilini o'rganing.</p>
+                        <a href="javascript:void(0)" class="read-more open-modal"><span
+                                data-i18n="common-more">Batafsil</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teachers" class="teachers">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle" data-i18n="teachers-subtitle">Malakali jamoa</span>
+                    <h2 class="section-title" data-i18n="teachers-title">Bizning eng yaxshi ustozlarimiz</h2>
+                </div>
+                <div class="teachers-grid">
+                    <div class="teacher-card animate-up">
+                        <div class="teacher-header-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Nilufar Rahmonova</h3>
+                            <span data-i18n="teacher-1-role">Matematika o'qituvchisi</span>
+                            <p data-i18n="teacher-1-desc">10 yillik tajribaga ega oliy toifali pedagog.</p>
+                        </div>
+                    </div>
+                    <div class="teacher-card animate-up delay-1">
+                        <div class="teacher-header-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Idrisov Jasur</h3>
+                            <span data-i18n="teacher-2-role">IT va Dasturlash</span>
+                            <p data-i18n="teacher-2-desc">Full-stack dasturchi va xalqaro sertifikatlar sohibi.</p>
+                        </div>
+                    </div>
+                    <div class="teacher-card animate-up delay-2">
+                        <div class="teacher-header-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Miss Sevara, Gulnoza va Flora</h3>
+                            <span data-i18n="teacher-3-role">Ingliz tili (IELTS 8.5)</span>
+                            <p data-i18n="teacher-3-desc">O'quvchilarni xalqaro imtihonlarga tayyorlash mutaxassisi.</p>
+                        </div>
+                    </div>
+                    <div class="teacher-card animate-up delay-3">
+                        <div class="teacher-header-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-info">
+                            <h3>Ustaz Ayman</h3>
+                            <span data-i18n="teacher-4-role">Arab tili ustoz</span>
+                            <p data-i18n="teacher-4-desc">Innovatsion metodikalar orqali fanni o'rgatuvchi tajribali
+                                ustoz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="news">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="news-subtitle">Yangiliklar</span>
+                    <h2 class="section-title" data-i18n="news-title">Maktabimizda nimalar bor?</h2>
+                </div>
+                <div class="news-grid">
+                    <article class="news-item animate-up">
+                        <div class="news-img">
+                            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=800&auto=format&fit=crop"
+                                alt="Basseyn" style="min-height: 200px; object-fit: cover;">
+                            <span class="date" data-i18n="news-1-date"></span>
+                        </div>
+                        <div class="news-info">
+                            <h3 data-i18n="news-1-title">Bizning maktabimizda katta basseyn bor</h3>
+                            <p data-i18n="news-1-desc">Maktabimizda o'quvchilar salomatligini mustahkamlash uchun
+                                zamonaviy suv havzasi mavjud.</p>
+                            <a href="#" class="btn-text news-more-btn" data-news-id="news-1"
+                                data-i18n="news-more">Davomini o'qish</a>
+                        </div>
+                    </article>
+                    <article class="news-item animate-up">
+                        <div class="news-img">
+                            <img src="https://avatars.mds.yandex.net/get-altay/5475658/2a000001849e694551c9e3de821570f81256/XXL_height"
+                                alt="Oshxona" style="min-height: 200px; object-fit: cover;">
+                            <span class="date" data-i18n="news-2-date"></span>
+                        </div>
+                        <div class="news-info">
+                            <h3 data-i18n="news-2-title">Bizning maktabimizda oshxona bor</h3>
+                            <p data-i18n="news-2-desc">Oshpazlarimiz tomonidan o'quvchilarga 3 mahal mazali ovqatlar
+                                beriladi.</p>
+                            <a href="#" class="btn-text news-more-btn" data-news-id="news-2"
+                                data-i18n="news-more">Davomini o'qish</a>
+                        </div>
+                    </article>
+                    <article class="news-item animate-up">
+                        <div class="news-img">
+                            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=800&auto=format&fit=crop"
+                                alt="Kutubxona" style="min-height: 200px; object-fit: cover;">
+                            <span class="date" data-i18n="news-3-date"></span>
+                        </div>
+                        <div class="news-info">
+                            <h3 data-i18n="news-3-title">Innovatsion kutubxona</h3>
+                            <p data-i18n="news-3-desc">O'quvchilarimiz uchun barcha turdagi adabiyotlar bilan
+                                ta'minlangan zamonaviy kutubxona.</p>
+                            <a href="#" class="btn-text news-more-btn" data-news-id="news-3"
+                                data-i18n="news-more">Davomini o'qish</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-box glass animate-fade">
+                    <div class="contact-info">
+                        <h2 data-i18n="contact-title">Biz bilan bog'laning</h2>
+                        <p data-i18n="contact-desc">Savollaringiz bormi? Ma'lumot qoldiring, biz sizga tez orada
+                            qo'ng'iroq qilamiz.</p>
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-i18n="contact-addr">Samarqand darvoza 3 lola</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+998 95 800 58 00</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@aurora.uz</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="input-group">
+                            <input type="text" placeholder="Ismingiz" required data-i18n-placeholder="form-name">
+                        </div>
+                        <div class="input-group">
+                            <input type="email" placeholder="Email manzilingiz" required
+                                data-i18n-placeholder="form-email">
+                        </div>
+                        <div class="input-group">
+                            <textarea placeholder="Xabaringiz" rows="5" required
+                                data-i18n-placeholder="form-msg"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width" data-i18n="form-btn">Xabar
+                            yuborish</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Branches Section -->
+            <div id="branches" class="branches-section animate-up margin-top-60">
+                <div class="section-header center">
+                    <span class="section-subtitle" data-i18n="branches-subtitle">Bizning filiallarimiz</span>
+                    <h2 class="section-title" data-i18n="branches-title">Toshkentning turli tumanlaridagi qulay
+                        nuqtalar</h2>
+                </div>
+                <div class="branches-grid">
+                    <!-- Branch 1: Chilonzor -->
+                    <div class="branch-card">
+                        <div class="branch-map-preview">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Lumos+Mind+Chilonzor+Tashkent"
+                                target="_blank"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; cursor: pointer;"></a>
+                            <iframe width="100%" height="100%" frameborder="0" style="border:0;"
+                                src="https://maps.google.com/maps?q=Lumos+Mind+Chilonzor,+Tashkent&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="branch-details">
+                            <h3 data-i18n="branch-1-name">Lumos Mind (Chilonzor)</h3>
+                            <div class="branch-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-i18n="branch-1-addr">Toshkent, Chilonzor tumani</span>
+                            </div>
+                            <div class="branch-info-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span data-i18n="branch-phone">+998 95 800 58 00</span>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Lumos+Mind+Chilonzor+Tashkent"
+                                target="_blank" class="btn btn-outline full-width"
+                                style="margin-top: 15px; font-size: 0.85rem; padding: 12px;">Xaritada ko'rish</a>
+                        </div>
+                    </div>
+                    <!-- Branch 2: Samarqand Darvoza -->
+                    <div class="branch-card">
+                        <div class="branch-map-preview">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Lumos+Mind+Samarqand+Darvoza+Tashkent"
+                                target="_blank"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; cursor: pointer;"></a>
+                            <iframe width="100%" height="100%" frameborder="0" style="border:0;"
+                                src="https://maps.google.com/maps?q=Lumos+Mind+Samarqand+Darvoza,+Tashkent&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="branch-details">
+                            <h3 data-i18n="branch-2-name">Lumos Mind (Samarqand Darvoza)</h3>
+                            <div class="branch-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-i18n="branch-2-addr">Toshkent, Samarqand Darvoza tumani</span>
+                            </div>
+                            <div class="branch-info-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span data-i18n="branch-phone">+998 95 800 58 00</span>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Lumos+Mind+Samarqand+Darvoza+Tashkent"
+                                target="_blank" class="btn btn-outline full-width"
+                                style="margin-top: 15px; font-size: 0.85rem; padding: 12px;">Xaritada ko'rish</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://play-lh.googleusercontent.com/rM2d2Mqnib05_vzZA4EILU83_L3n-rApKBCx0L0mZB0UGPDPythUXdFueHw83ZEYxA"
+                        alt="LUMOS Logo" style="height: 60px;">
+                    <p data-i18n="footer-brand-desc">LUMOS SCHOOL - eng ilg'or metodikalar va zamonaviy ta'lim standarti
+                        asosida ish yurituvchi maktab.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="https://www.instagram.com/lumosmindschool?igsh=OTk2Y3NkeGV2MnJ4" target="_blank"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://t.me/LumosMind" target="_blank" aria-label="Telegram"><i
+                                class="fab fa-telegram"></i></a>
+                        <a href="https://www.youtube.com/@lumosmindschool8270" target="_blank" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/lumosmind/?locale=ru_RU" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer-links-1-title">Tezkor havolalar</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav-home">Asosiy</a></li>
+                        <li><a href="#about" data-i18n="nav-about">Biz haqimizda</a></li>
+                        <li><a href="#programs" data-i18n="nav-programs">Dasturlar</a></li>
+                        <li><a href="#news" data-i18n="nav-news">Yangiliklar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer-links-2-title">Bog'lanish</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer-qabul">Qabul bo'limi</a></li>
+                        <li><a href="#" data-i18n="footer-students">Talabalar hayoti</a></li>
+                        <li><a href="#" data-i18n="footer-faq">FAQ</a></li>
+                        <li><a href="login.html" style="color: var(--accent); font-weight: bold;"><i
+                                    class="fas fa-user-shield"></i> <span data-i18n="footer-admin">Admin
+                                    Panel</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer-copy">&copy; 2024 LUMOS SCHOOL. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Program Detail Modal -->
+    <div id="program-modal" class="modal-overlay">
+        <div class="modal-content glass animate-fade">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <div class="modal-icon"><i class="fas fa-code"></i></div>
+                    <h2 id="modal-title">Dastur Nomi</h2>
+                </div>
+                <div class="modal-description">
+                    <p id="modal-desc">Batafsil ma'lumot shu yerda bo'ladi.</p>
+                    <div class="modal-features">
+                        <h4 data-i18n="modal-features-title">Asosiy yo'nalishlar:</h4>
+                        <ul id="modal-features-list">
+                            <!-- Features will be loaded here -->
+                        </ul>
+                    </div>
+                    <div class="modal-cta">
+                        <a href="#contact" class="btn btn-primary" id="modal-reg-btn" data-i18n="hero-btn-2">Ro'yxatdan
+                            o'tish</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-content glass animate-fade" style="max-width: 400px; padding: 30px;">
+            <span class="close-modal close-login-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-header" style="text-align: center; margin-bottom: 20px;">
+                    <div class="modal-icon" style="top: 0;"><i class="fas fa-user-plus"></i></div>
+                    <h2 class="section-title" style="margin-top: 10px;">Ro'yxatdan o'tish</h2>
+                </div>
+                <form id="login-form">
+                    <div class="input-group" style="margin-bottom: 15px;">
+                        <input type="text" id="reg-name" placeholder="Ismingiz" required
+                            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: var(--text);">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 15px;">
+                        <input type="text" id="reg-surname" placeholder="Familiyangiz" required
+                            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: var(--text);">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 15px;">
+                        <input type="number" id="reg-age" placeholder="Yoshingiz" required
+                            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: var(--text);">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="text" id="reg-class" placeholder="Sinfingiz (masalan: 5-A)" required
+                            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: var(--text);">
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width" style="width: 100%;">Kirish</button>
+                    <p id="login-error"
+                        style="color: #ff4d4d; margin-top: 15px; font-weight: bold; display: none; text-align: center;">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Detail Modal -->
+    <div id="news-modal" class="modal-overlay">
+        <div class="modal-content glass animate-fade">
+            <span class="close-modal close-news-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <div class="modal-icon"><i class="fas fa-newspaper"></i></div>
+                    <h2 id="news-modal-title">Yangilik Nomi</h2>
+                </div>
+                <div class="modal-description">
+                    <small id="news-modal-date" style="color: var(--accent); font-weight: 600;"></small>
+                    <p id="news-modal-desc" style="margin-top: 1.5rem; line-height: 1.8;"></p>
+                    <div class="modal-cta">
+                        <button class="btn btn-primary close-news-modal" data-i18n="common-more">Yopish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admission Modal -->
+    <div id="admission-modal" class="modal-overlay">
+        <div class="modal-content glass animate-fade" style="max-width: 600px;">
+            <span class="close-modal close-admission-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <div class="modal-icon"><i class="fas fa-file-contract"></i></div>
+                    <h2>Maktab Qabul Shartlari</h2>
+                </div>
+                <div class="modal-description" style="max-height: 400px; overflow-y: auto; padding-right: 10px;">
+                    <!-- Student Details Form -->
+                    <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+                        <h4 style="color: var(--primary); margin-bottom: 15px;">O'quvchi ma'lumotlari</h4>
+                        <div class="input-group">
+                            <input type="text" id="adm-name" placeholder="O'quvchining Ismi" required
+                                style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="adm-surname" placeholder="O'quvchining Familiyasi" required
+                                style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        </div>
+                        <div class="input-group">
+                            <input type="number" id="adm-age" placeholder="Yoshi" required
+                                style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="adm-phone" placeholder="Telefon raqami (dadasining yoki oyisining)"
+                                required
+                                style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        </div>
+                        <div class="input-group">
+                            <select id="adm-class"
+                                style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                <option value="" disabled selected>Sinfni tanlang</option>
+                                <option value="1">1-sinf</option>
+                                <option value="2">2-sinf</option>
+                                <option value="3">3-sinf</option>
+                                <option value="4">4-sinf</option>
+                                <option value="5">5-sinf</option>
+                                <option value="6">6-sinf</option>
+                                <option value="7">7-sinf</option>
+                                <option value="8">8-sinf</option>
+                                <option value="9">9-sinf</option>
+                                <option value="10">10-sinf</option>
+                                <option value="11">11-sinf</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="terms-content" style="text-align: left; line-height: 1.6;">
+                        <h4 style="color: var(--primary); margin-bottom: 15px;">1. Umumiy qoidalar</h4>
+                        <p>Ushbu shartnoma LUMOS SCHOOL va o'quvchining ota-onasi (yoki qonuniy vakili) o'rtasida
+                            tuziladi. Ota-ona maktab ichki tartib-qoidalariga rioya qilishga majburdir.</p>
+
+                        <h4 style="color: var(--primary); margin: 15px 0;">2. To'lov shartlari</h4>
+                        <p>O'qish to'lovi bir oy uchun <strong>5,000,000 (besh million) so'm</strong> qilib belgilangan.
+                            To'lov har oyning 5-sanasigacha amalga oshirilishi shart.</p>
+
+                        <h4 style="color: var(--primary); margin: 15px 0;">3. Kerakli hujjatlar</h4>
+                        <ul style="list-style: disc; margin-left: 20px; margin-bottom: 15px;">
+                            <li>Bolaning tug'ilganlik haqidagi guvohnomasi nusxasi.</li>
+                            <li>Ota-ona pasport nusxalari.</li>
+                            <li><strong>Tibbiy karta (026 shakl)</strong> - majburiy.</li>
+                            <li>3x4 rasmlar (4 dona).</li>
+                        </ul>
+
+                        <h4 style="color: var(--primary); margin: 15px 0;">4. Maktab majburiyatlari</h4>
+                        <p>Maktab o'quvchiga davlat standartlari bo'yicha sifatli ta'lim berish, xavfsizligini
+                            ta'minlash va tarbiyaviy ishlar olib borish majburiyatini oladi.</p>
+                    </div>
+
+                    <div
+                        style="margin-top: 25px; background: rgba(255, 102, 0, 0.1); padding: 15px; border-radius: 10px;">
+                        <label style="display: flex; gap: 10px; align-items: flex-start; cursor: pointer;">
+                            <input type="checkbox" id="terms-agree" style="width: 20px; height: 20px; margin-top: 3px;">
+                            <span style="font-size: 0.9rem;">Men barcha shartlar bilan tanishib chiqdim, ma'lumotlarni
+                                to'g'ri kiritdim va test topshirishga tayyorman.</span>
+                        </label>
+                    </div>
+
+                    <div class="modal-cta" style="margin-top: 20px;">
+                        <button class="btn btn-primary full-width" id="accept-admission-btn" disabled
+                            style="opacity: 0.5; cursor: not-allowed;">Testni Boshlash</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quiz-modal" class="modal-overlay">
+        <div class="modal-content glass animate-fade"
+            style="max-width: 700px; padding: 30px; max-height: 90vh; overflow-y: auto;">
+            <div class="modal-body">
+                <div class="modal-header" style="justify-content: center; margin-bottom: 30px;">
+                    <h2 id="quiz-title">Kirish Imtihoni</h2>
+                </div>
+                <div id="quiz-container">
+                    <!-- Questions will be loaded here -->
+                </div>
+                <div id="quiz-result" style="display: none; text-align: center;">
+                    <h3 id="result-score" style="font-size: 2rem; color: var(--accent); margin-bottom: 20px;"></h3>
+                    <p id="result-message" style="margin-bottom: 20px; font-size: 1.1rem;"></p>
+                    <button class="btn btn-primary" onclick="closeQuiz()">Yopish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lumos AI Chat Button -->
+    <div id="lumos-ai-btn" class="scroll-top">
+        <img src="https://play-lh.googleusercontent.com/rM2d2Mqnib05_vzZA4EILU83_L3n-rApKBCx0L0mZB0UGPDPythUXdFueHw83ZEYxA"
+            alt="Lumos AI">
+    </div>
+
+    <!-- Lumos AI Modal -->
+    <div id="ai-modal" class="modal-overlay ai-modal">
+        <div class="modal-content glass ai-chat-container animate-fade">
+            <span class="close-modal close-ai-modal">&times;</span>
+            <div class="chat-header">
+                <img src="https://play-lh.googleusercontent.com/rM2d2Mqnib05_vzZA4EILU83_L3n-rApKBCx0L0mZB0UGPDPythUXdFueHw83ZEYxA"
+                    alt="Lumos AI" class="chat-logo">
+                <div>
+                    <h3>Lumos AI</h3>
+                    <span>Onlayn yordamchi</span>
+                </div>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="message ai-message">
+                    Assalomu alaykum! Men Lumos AI yordamchisiman. Maktabimiz haqida qanday savollaringiz bor?
+                    <b>Qachon kelsa bo'ladi?</b> deb so'rashingiz mumkin.
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Xabaringizni yozing...">
+                <button id="send-chat"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
